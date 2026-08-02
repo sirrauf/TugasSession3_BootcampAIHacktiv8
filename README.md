@@ -1,8 +1,8 @@
 # 🏝️ NusantaraChatbot
 
 #Screenshoot Tampilan
-![SS_Tampilan1]()
-![SS_Tampilan2]()
+![SS_Tampilan1](https://github.com/sirrauf/TugasSession3_BootcampAIHacktiv8/blob/main/Screenshoot_Tampilan/Screenshot%20(756).png?raw=true)
+![SS_Tampilan2](https://github.com/sirrauf/TugasSession3_BootcampAIHacktiv8/blob/main/Screenshoot_Tampilan/Screenshot%20(757).png?raw=true)
 
 > **Chatbot AI Ahli Budaya, Suku, Kuliner, dan Wisata Indonesia**  
 > Ditenagai oleh **Google Gemini AI** dengan arsitektur **Full-Stack JavaScript** (Node.js + React)
