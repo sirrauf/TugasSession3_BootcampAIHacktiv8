@@ -1,8 +1,9 @@
 # 🏝️ NusantaraChatbot
 
-#Screenshoot Tampilan
-![SS_Tampilan1](https://github.com/sirrauf/TugasSession3_BootcampAIHacktiv8/blob/main/Screenshoot_Tampilan/Screenshot%20(756).png?raw=true)
-![SS_Tampilan2](https://github.com/sirrauf/TugasSession3_BootcampAIHacktiv8/blob/main/Screenshoot_Tampilan/Screenshot%20(757).png?raw=true)
+# Screenshoot Tampilan
+
+![SS_Tampilan1](<https://github.com/sirrauf/TugasSession3_BootcampAIHacktiv8/blob/main/Screenshoot_Tampilan/Screenshot%20(756).png?raw=true>)
+![SS_Tampilan2](<https://github.com/sirrauf/TugasSession3_BootcampAIHacktiv8/blob/main/Screenshoot_Tampilan/Screenshot%20(757).png?raw=true>)
 
 > **Chatbot AI Ahli Budaya, Suku, Kuliner, dan Wisata Indonesia**  
 > Ditenagai oleh **Google Gemini AI** dengan arsitektur **Full-Stack JavaScript** (Node.js + React)
@@ -18,6 +19,10 @@
 5. [Teknologi yang Digunakan](#5-teknologi-yang-digunakan)
 6. [Prasyarat & Kebutuhan Sistem](#6-prasyarat--kebutuhan-sistem)
 7. [Instalasi & Konfigurasi](#7-instalasi--konfigurasi)
+   - [7.1 Install Node Modules Backend](#71-install-node-modules-backend)
+   - [7.2 Install Node Modules Frontend](#72-install-node-modules-frontend)
+   - [7.3 Verifikasi Instalasi](#73-verifikasi-instalasi)
+   - [7.4 Reinstall Node Modules (Jika Bermasalah)](#74-reinstall-node-modules-jika-bermasalah)
 8. [Cara Menjalankan Proyek](#8-cara-menjalankan-proyek)
    - [8.1 Menjalankan Backend (Server)](#81-menjalankan-backend-server)
    - [8.2 Menjalankan Frontend (Client)](#82-menjalankan-frontend-client)
@@ -33,25 +38,25 @@
 
 **NusantaraChatbot** adalah aplikasi chatbot berbasis web yang dibangun sebagai bagian dari tugas **Bootcamp AI Engineer Hacktiv8 (Sesi 3)**. Aplikasi ini menghadirkan pengalaman percakapan interaktif tentang kekayaan budaya Nusantara, mulai dari suku dan adat istiadat, seni budaya, kuliner khas daerah, hingga destinasi wisata di seluruh Indonesia.
 
-Chatbot ini menggunakan model bahasa besar **Google Gemini** (`gemini-3.6-flash`) sebagai otak AI-nya, dengan persona bernama **"NusantaraBot"** yang dikonfigurasi melalui *system prompt* khusus agar selalu menjawab dalam Bahasa Indonesia yang ramah dan antusias.
+Chatbot ini menggunakan model bahasa besar **Google Gemini** (`gemini-3.6-flash`) sebagai otak AI-nya, dengan persona bernama **"NusantaraBot"** yang dikonfigurasi melalui _system prompt_ khusus agar selalu menjawab dalam Bahasa Indonesia yang ramah dan antusias.
 
 ---
 
 ## 2. Fitur Utama
 
-| Fitur | Keterangan |
-|---|---|
-| 💬 **Chat Interaktif** | Percakapan real-time dengan AI tentang topik Indonesia |
+| Fitur                        | Keterangan                                                            |
+| ---------------------------- | --------------------------------------------------------------------- |
+| 💬 **Chat Interaktif**       | Percakapan real-time dengan AI tentang topik Indonesia                |
 | 🏛️ **Informasi Suku & Adat** | Pengetahuan tentang suku-suku di Indonesia (Jawa, Batak, Dayak, dll.) |
-| 🍜 **Kuliner Nusantara** | Informasi makanan dan jajanan khas dari berbagai daerah |
-| 🏝️ **Rekomendasi Wisata** | Destinasi wisata alam, budaya, dan sejarah seluruh Indonesia |
-| 🎭 **Seni & Budaya** | Tari tradisional, wayang, batik, musik daerah, dll. |
-| ⚡ **Quick Questions** | Tombol pertanyaan cepat untuk memulai percakapan |
-| 🗑️ **Reset Chat** | Tombol untuk memulai sesi percakapan baru |
-| 🧠 **Riwayat Percakapan** | Menyimpan konteks 10 pesan terakhir untuk percakapan yang koheren |
-| 🖼️ **Analisis Gambar** | Endpoint API untuk analisis gambar dalam konteks budaya |
-| 📄 **Analisis Dokumen** | Endpoint API untuk meringkas konten dokumen |
-| 🎵 **Transkripsi Audio** | Endpoint API untuk mentranskrip file audio |
+| 🍜 **Kuliner Nusantara**     | Informasi makanan dan jajanan khas dari berbagai daerah               |
+| 🏝️ **Rekomendasi Wisata**    | Destinasi wisata alam, budaya, dan sejarah seluruh Indonesia          |
+| 🎭 **Seni & Budaya**         | Tari tradisional, wayang, batik, musik daerah, dll.                   |
+| ⚡ **Quick Questions**       | Tombol pertanyaan cepat untuk memulai percakapan                      |
+| 🗑️ **Reset Chat**            | Tombol untuk memulai sesi percakapan baru                             |
+| 🧠 **Riwayat Percakapan**    | Menyimpan konteks 10 pesan terakhir untuk percakapan yang koheren     |
+| 🖼️ **Analisis Gambar**       | Endpoint API untuk analisis gambar dalam konteks budaya               |
+| 📄 **Analisis Dokumen**      | Endpoint API untuk meringkas konten dokumen                           |
+| 🎵 **Transkripsi Audio**     | Endpoint API untuk mentranskrip file audio                            |
 
 ---
 
@@ -153,13 +158,13 @@ NusantaraChatbot/                    ← Root Direktori Proyek
 
 ### Penjelasan File Kunci
 
-| File | Peran |
-|---|---|
-| `index.js` | Server Express utama; mendefinisikan semua endpoint API dan System Prompt |
-| `.env` | Menyimpan `GEMINI_API_KEY` yang **tidak boleh** di-commit ke Git |
-| `client/src/App.jsx` | Komponen React utama; mengelola seluruh logika UI dan komunikasi API |
-| `client/src/App.css` | Seluruh styling tampilan chatbot (glassmorphism, animasi, dll.) |
-| `client/vite.config.js` | Konfigurasi Vite untuk proses build dan dev server |
+| File                    | Peran                                                                     |
+| ----------------------- | ------------------------------------------------------------------------- |
+| `index.js`              | Server Express utama; mendefinisikan semua endpoint API dan System Prompt |
+| `.env`                  | Menyimpan `GEMINI_API_KEY` yang **tidak boleh** di-commit ke Git          |
+| `client/src/App.jsx`    | Komponen React utama; mengelola seluruh logika UI dan komunikasi API      |
+| `client/src/App.css`    | Seluruh styling tampilan chatbot (glassmorphism, animasi, dll.)           |
+| `client/vite.config.js` | Konfigurasi Vite untuk proses build dan dev server                        |
 
 ---
 
@@ -167,24 +172,24 @@ NusantaraChatbot/                    ← Root Direktori Proyek
 
 ### Backend
 
-| Paket | Versi | Fungsi |
-|---|---|---|
-| **Node.js** | ≥ 18.x | Runtime JavaScript server-side |
-| **express** | ^5.2.1 | Framework web server HTTP |
-| **@google/genai** | ^2.15.0 | SDK resmi Google Gemini AI |
-| **dotenv** | ^17.4.2 | Load variabel dari file `.env` |
-| **cors** | ^2.8.6 | Mengizinkan request lintas origin |
-| **multer** | ^2.2.0 | Middleware upload file (gambar, audio, dokumen) |
+| Paket             | Versi   | Fungsi                                          |
+| ----------------- | ------- | ----------------------------------------------- |
+| **Node.js**       | ≥ 18.x  | Runtime JavaScript server-side                  |
+| **express**       | ^5.2.1  | Framework web server HTTP                       |
+| **@google/genai** | ^2.15.0 | SDK resmi Google Gemini AI                      |
+| **dotenv**        | ^17.4.2 | Load variabel dari file `.env`                  |
+| **cors**          | ^2.8.6  | Mengizinkan request lintas origin               |
+| **multer**        | ^2.2.0  | Middleware upload file (gambar, audio, dokumen) |
 
 ### Frontend
 
-| Paket | Versi | Fungsi |
-|---|---|---|
-| **React** | ^19.2.8 | Library UI berbasis komponen |
-| **react-dom** | ^19.2.8 | Rendering React ke DOM browser |
-| **Vite** | ^8.2.0 | Build tool & dev server modern |
-| **@vitejs/plugin-react** | ^6.0.4 | Plugin Vite untuk transpilasi JSX |
-| **oxlint** | ^1.75.0 | Linter JavaScript/TypeScript cepat |
+| Paket                    | Versi   | Fungsi                             |
+| ------------------------ | ------- | ---------------------------------- |
+| **React**                | ^19.2.8 | Library UI berbasis komponen       |
+| **react-dom**            | ^19.2.8 | Rendering React ke DOM browser     |
+| **Vite**                 | ^8.2.0  | Build tool & dev server modern     |
+| **@vitejs/plugin-react** | ^6.0.4  | Plugin Vite untuk transpilasi JSX  |
+| **oxlint**               | ^1.75.0 | Linter JavaScript/TypeScript cepat |
 
 ---
 
@@ -192,11 +197,11 @@ NusantaraChatbot/                    ← Root Direktori Proyek
 
 Pastikan software berikut sudah terinstall di sistem Anda sebelum menjalankan proyek:
 
-| Kebutuhan | Versi Minimum | Cek Instalasi |
-|---|---|---|
-| **Node.js** | v18.0.0 atau lebih baru | `node --version` |
-| **npm** | v9.0.0 atau lebih baru | `npm --version` |
-| **Google Gemini API Key** | - | [Dapatkan di Google AI Studio](https://aistudio.google.com/app/apikey) |
+| Kebutuhan                 | Versi Minimum           | Cek Instalasi                                                          |
+| ------------------------- | ----------------------- | ---------------------------------------------------------------------- |
+| **Node.js**               | v18.0.0 atau lebih baru | `node --version`                                                       |
+| **npm**                   | v9.0.0 atau lebih baru  | `npm --version`                                                        |
+| **Google Gemini API Key** | -                       | [Dapatkan di Google AI Studio](https://aistudio.google.com/app/apikey) |
 
 > **Catatan:** npm sudah otomatis terinstall bersama Node.js. Download Node.js di: https://nodejs.org/
 
@@ -218,30 +223,160 @@ GEMINI_API_KEY=YOUR_API_KEY_DISINI
 
 > ⚠️ **PENTING:** Ganti nilai `GEMINI_API_KEY` dengan API Key milik Anda yang valid dari [Google AI Studio](https://aistudio.google.com/app/apikey). **Jangan pernah** membagikan atau meng-upload file `.env` ke repositori publik.
 
-### Langkah 3: Install Dependensi Backend
+---
 
-Buka terminal, navigasi ke folder root proyek, lalu jalankan:
+### 7.1 Install Node Modules Backend
+
+Folder Backend berada di **root proyek** (`NusantaraChatbot/`). Semua dependensi dikelola melalui `package.json` yang ada di sana.
+
+**Langkah-langkah:**
 
 ```bash
-# Masuk ke folder root proyek
+# 1. Pastikan Anda berada di folder ROOT proyek
 cd NusantaraChatbot
 
-# Install semua dependensi backend
+# 2. Jalankan perintah install
 npm install
 ```
 
-### Langkah 4: Install Dependensi Frontend
+**Paket yang akan di-install secara otomatis:**
+
+| Paket           | Versi   | Keterangan            |
+| --------------- | ------- | --------------------- |
+| `@google/genai` | ^2.15.0 | SDK Google Gemini AI  |
+| `cors`          | ^2.8.6  | Middleware CORS       |
+| `dotenv`        | ^17.4.2 | Loader file `.env`    |
+| `express`       | ^5.2.1  | Framework web server  |
+| `multer`        | ^2.2.0  | Upload file multipart |
+
+**Output yang diharapkan setelah berhasil:**
+
+```
+added XX packages, and audited XX packages in Xs
+found 0 vulnerabilities
+```
+
+Setelah selesai, folder `node_modules/` akan muncul di dalam `NusantaraChatbot/`.
+
+---
+
+### 7.2 Install Node Modules Frontend
+
+Folder Frontend berada di **`NusantaraChatbot/client/`**. Buka terminal **baru** atau arahkan ke subfolder `client`.
+
+**Langkah-langkah:**
 
 ```bash
-# Masuk ke folder client
+# 1. Dari folder root, masuk ke folder client
 cd client
 
-# Install semua dependensi frontend
+# 2. Jalankan perintah install
 npm install
 
-# Kembali ke folder root
+# 3. Setelah selesai, kembali ke folder root (opsional)
 cd ..
 ```
+
+**Paket yang akan di-install secara otomatis:**
+
+**Dependencies (Runtime):**
+
+| Paket       | Versi   | Keterangan            |
+| ----------- | ------- | --------------------- |
+| `react`     | ^19.2.8 | Library UI React      |
+| `react-dom` | ^19.2.8 | Renderer React ke DOM |
+
+**Dev Dependencies (Development Tools):**
+
+| Paket                  | Versi    | Keterangan                 |
+| ---------------------- | -------- | -------------------------- |
+| `vite`                 | ^8.2.0   | Build tool & dev server    |
+| `@vitejs/plugin-react` | ^6.0.4   | Plugin transpilasi JSX     |
+| `@types/react`         | ^19.2.17 | Type definitions React     |
+| `@types/react-dom`     | ^19.2.3  | Type definitions React DOM |
+| `oxlint`               | ^1.75.0  | Linter JavaScript cepat    |
+
+**Output yang diharapkan setelah berhasil:**
+
+```
+added XX packages, and audited XX packages in Xs
+found 0 vulnerabilities
+```
+
+Setelah selesai, folder `node_modules/` akan muncul di dalam `NusantaraChatbot/client/`.
+
+---
+
+### 7.3 Verifikasi Instalasi
+
+Pastikan kedua folder `node_modules` sudah terbentuk:
+
+```
+NusantaraChatbot/
+├── node_modules/        ✅ (Backend - harus ada)
+└── client/
+    └── node_modules/    ✅ (Frontend - harus ada)
+```
+
+Cek juga menggunakan perintah berikut di terminal:
+
+```bash
+# Cek node_modules Backend (dari folder root)
+dir node_modules          # Windows
+ls node_modules           # Mac / Linux
+
+# Cek node_modules Frontend (dari folder client)
+dir client\node_modules   # Windows
+ls client/node_modules    # Mac / Linux
+```
+
+---
+
+### 7.4 Reinstall Node Modules (Jika Bermasalah)
+
+Jika terjadi error saat `npm install` atau setelah pull dari repository, lakukan reinstall bersih:
+
+**Untuk Backend (di folder root):**
+
+```bash
+# Windows
+cd NusantaraChatbot
+rd /s /q node_modules
+del package-lock.json
+npm install
+
+# Mac / Linux
+cd NusantaraChatbot
+rm -rf node_modules
+rm package-lock.json
+npm install
+```
+
+**Untuk Frontend (di folder client):**
+
+```bash
+# Windows
+cd NusantaraChatbot\client
+rd /s /q node_modules
+del package-lock.json
+npm install
+
+# Mac / Linux
+cd NusantaraChatbot/client
+rm -rf node_modules
+rm package-lock.json
+npm install
+```
+
+**Reinstall Keduanya Sekaligus (Mac / Linux):**
+
+```bash
+# Dari folder root NusantaraChatbot/
+rm -rf node_modules package-lock.json && npm install
+rm -rf client/node_modules client/package-lock.json && cd client && npm install && cd ..
+```
+
+> 💡 **Tips:** Selalu jalankan `npm install` kembali setiap kali Anda menambahkan paket baru ke `package.json` atau setelah melakukan `git pull` dari repository.
 
 ---
 
@@ -262,6 +397,7 @@ npm start
 ```
 
 **Output yang diharapkan:**
+
 ```
 Server NusantaraBot ready on http://localhost:3000
 ```
@@ -269,6 +405,7 @@ Server NusantaraBot ready on http://localhost:3000
 Backend kini berjalan di: **`http://localhost:3000`**
 
 Anda dapat memverifikasinya dengan membuka `http://localhost:3000` di browser, yang akan menampilkan:
+
 ```json
 {
   "status": "ok",
@@ -289,6 +426,7 @@ npm run dev
 ```
 
 **Output yang diharapkan:**
+
 ```
   VITE v8.x.x  ready in xxx ms
 
@@ -302,9 +440,9 @@ Buka URL tersebut di browser untuk menggunakan NusantaraChatbot. 🎉
 
 ### Ringkasan Port
 
-| Layanan | URL | Perintah Jalankan |
-|---|---|---|
-| **Backend API** | http://localhost:3000 | `npm run dev` (di folder root) |
+| Layanan         | URL                   | Perintah Jalankan                |
+| --------------- | --------------------- | -------------------------------- |
+| **Backend API** | http://localhost:3000 | `npm run dev` (di folder root)   |
 | **Frontend UI** | http://localhost:5173 | `npm run dev` (di folder client) |
 
 ---
@@ -314,6 +452,7 @@ Buka URL tersebut di browser untuk menggunakan NusantaraChatbot. 🎉
 Base URL Backend: `http://localhost:3000`
 
 ### `GET /`
+
 **Health check** — Mengecek apakah server berjalan.
 
 ```
@@ -321,6 +460,7 @@ GET http://localhost:3000/
 ```
 
 **Response `200 OK`:**
+
 ```json
 {
   "status": "ok",
@@ -331,6 +471,7 @@ GET http://localhost:3000/
 ---
 
 ### `POST /chat`
+
 **Endpoint utama chatbot** — Mengirim pesan dan mendapatkan respons AI.
 
 ```
@@ -339,6 +480,7 @@ Content-Type: application/json
 ```
 
 **Request Body:**
+
 ```json
 {
   "message": "Ceritakan tentang Suku Toraja",
@@ -349,12 +491,13 @@ Content-Type: application/json
 }
 ```
 
-| Field | Tipe | Wajib | Keterangan |
-|---|---|---|---|
-| `message` | `string` | ✅ Ya | Pesan dari pengguna |
-| `history` | `array` | ❌ Tidak | Riwayat percakapan sebelumnya (default: `[]`) |
+| Field     | Tipe     | Wajib    | Keterangan                                    |
+| --------- | -------- | -------- | --------------------------------------------- |
+| `message` | `string` | ✅ Ya    | Pesan dari pengguna                           |
+| `history` | `array`  | ❌ Tidak | Riwayat percakapan sebelumnya (default: `[]`) |
 
 **Response `200 OK`:**
+
 ```json
 {
   "result": "🏛️ Suku Toraja adalah salah satu suku yang berasal dari Sulawesi Selatan..."
@@ -362,6 +505,7 @@ Content-Type: application/json
 ```
 
 **Response `400 Bad Request`:**
+
 ```json
 {
   "message": "Parameter \"message\" wajib diisi."
@@ -371,6 +515,7 @@ Content-Type: application/json
 ---
 
 ### `POST /generate-text`
+
 **Generasi teks bebas** — Menghasilkan teks berdasarkan prompt.
 
 ```
@@ -379,6 +524,7 @@ Content-Type: application/json
 ```
 
 **Request Body:**
+
 ```json
 {
   "prompt": "Tuliskan deskripsi singkat tentang Tari Kecak"
@@ -386,6 +532,7 @@ Content-Type: application/json
 ```
 
 **Response `200 OK`:**
+
 ```json
 {
   "result": "Tari Kecak adalah tarian tradisional Bali yang unik..."
@@ -395,6 +542,7 @@ Content-Type: application/json
 ---
 
 ### `POST /generate-from-image`
+
 **Analisis gambar** — Mendeskripsikan atau menganalisis gambar dalam konteks budaya Indonesia.
 
 ```
@@ -402,12 +550,13 @@ POST http://localhost:3000/generate-from-image
 Content-Type: multipart/form-data
 ```
 
-| Field | Tipe | Keterangan |
-|---|---|---|
-| `image` | `file` | File gambar (JPG, PNG, WEBP, dll.) |
+| Field    | Tipe     | Keterangan                                    |
+| -------- | -------- | --------------------------------------------- |
+| `image`  | `file`   | File gambar (JPG, PNG, WEBP, dll.)            |
 | `prompt` | `string` | (Opsional) Pertanyaan spesifik tentang gambar |
 
 **Response `200 OK`:**
+
 ```json
 {
   "result": "Gambar ini menampilkan batik dengan motif parang..."
@@ -417,6 +566,7 @@ Content-Type: multipart/form-data
 ---
 
 ### `POST /generate-from-document`
+
 **Analisis dokumen** — Meringkas atau menganalisis isi dokumen.
 
 ```
@@ -424,14 +574,15 @@ POST http://localhost:3000/generate-from-document
 Content-Type: multipart/form-data
 ```
 
-| Field | Tipe | Keterangan |
-|---|---|---|
-| `document` | `file` | File dokumen (PDF, TXT, dll.) |
-| `prompt` | `string` | (Opsional) Instruksi spesifik untuk dokumen |
+| Field      | Tipe     | Keterangan                                  |
+| ---------- | -------- | ------------------------------------------- |
+| `document` | `file`   | File dokumen (PDF, TXT, dll.)               |
+| `prompt`   | `string` | (Opsional) Instruksi spesifik untuk dokumen |
 
 ---
 
 ### `POST /generate-from-audio`
+
 **Transkripsi audio** — Mentranskrip atau menganalisis konten file audio.
 
 ```
@@ -439,9 +590,9 @@ POST http://localhost:3000/generate-from-audio
 Content-Type: multipart/form-data
 ```
 
-| Field | Tipe | Keterangan |
-|---|---|---|
-| `audio` | `file` | File audio (MP3, WAV, dll.) |
+| Field    | Tipe     | Keterangan                                |
+| -------- | -------- | ----------------------------------------- |
+| `audio`  | `file`   | File audio (MP3, WAV, dll.)               |
 | `prompt` | `string` | (Opsional) Instruksi spesifik untuk audio |
 
 ---
@@ -458,12 +609,12 @@ Setelah kedua server (backend dan frontend) berjalan, buka browser dan akses `ht
 
 2. **Menggunakan Quick Questions (Pertanyaan Cepat)**
    - Di atas area input terdapat tombol-tombol pertanyaan cepat:
-     - 🏛️ *Ceritakan tentang Suku Toraja*
-     - 🍜 *Apa makanan khas Padang?*
-     - 🏝️ *Rekomendasikan wisata di Bali*
-     - 🎭 *Jelaskan tari Saman dari Aceh*
-     - 🌋 *Tempat wisata alam terbaik di Jawa*
-     - 🥘 *Makanan tradisional khas Betawi*
+     - 🏛️ _Ceritakan tentang Suku Toraja_
+     - 🍜 _Apa makanan khas Padang?_
+     - 🏝️ _Rekomendasikan wisata di Bali_
+     - 🎭 _Jelaskan tari Saman dari Aceh_
+     - 🌋 _Tempat wisata alam terbaik di Jawa_
+     - 🥘 _Makanan tradisional khas Betawi_
    - Klik salah satu untuk langsung mengirim pertanyaan tersebut
 
 3. **Mengirim Pesan**
@@ -488,12 +639,13 @@ Setelah kedua server (backend dan frontend) berjalan, buka browser dan akses `ht
 
 File `.env` berada di folder **root** proyek (`NusantaraChatbot/.env`).
 
-| Variabel | Wajib | Default | Keterangan |
-|---|---|---|---|
-| `GEMINI_API_KEY` | ✅ Ya | — | API Key Google Gemini dari AI Studio |
-| `PORT` | ❌ Tidak | `3000` | Port yang digunakan server backend |
+| Variabel         | Wajib    | Default | Keterangan                           |
+| ---------------- | -------- | ------- | ------------------------------------ |
+| `GEMINI_API_KEY` | ✅ Ya    | —       | API Key Google Gemini dari AI Studio |
+| `PORT`           | ❌ Tidak | `3000`  | Port yang digunakan server backend   |
 
 **Contoh file `.env`:**
+
 ```env
 GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 PORT=3000
@@ -506,9 +658,11 @@ PORT=3000
 ## 12. Troubleshooting
 
 ### ❌ Error: `Cannot connect to server`
-**Gejala:** Frontend menampilkan pesan *"Pastikan server backend berjalan di port 3000"*
+
+**Gejala:** Frontend menampilkan pesan _"Pastikan server backend berjalan di port 3000"_
 
 **Solusi:**
+
 - Pastikan Backend sudah dijalankan terlebih dahulu dengan `npm run dev` di folder root
 - Cek apakah port 3000 tidak digunakan oleh aplikasi lain
 - Verifikasi dengan membuka `http://localhost:3000` di browser
@@ -516,9 +670,11 @@ PORT=3000
 ---
 
 ### ❌ Error: `API Key invalid` atau respons error dari Gemini
+
 **Gejala:** Bot membalas dengan pesan error, atau terminal Backend menampilkan error 400/403
 
 **Solusi:**
+
 - Pastikan `GEMINI_API_KEY` di file `.env` sudah benar dan valid
 - Cek apakah API Key masih aktif di [Google AI Studio](https://aistudio.google.com/)
 - Pastikan tidak ada spasi atau karakter tambahan di sekitar nilai API Key
@@ -526,9 +682,11 @@ PORT=3000
 ---
 
 ### ❌ Error: `Module not found` atau `Cannot find package`
+
 **Gejala:** Error saat menjalankan `npm run dev`
 
 **Solusi:**
+
 ```bash
 # Hapus dan install ulang node_modules di root
 cd NusantaraChatbot
@@ -544,9 +702,11 @@ npm install
 ---
 
 ### ❌ Port 5173 atau 3000 sudah digunakan
+
 **Gejala:** Error `EADDRINUSE: address already in use`
 
 **Solusi:**
+
 - Ubah port backend dengan menambahkan `PORT=3001` di file `.env`
 - Untuk frontend, Vite akan otomatis mencoba port berikutnya (5174, dst.)
 - Atau hentikan proses yang menggunakan port tersebut
@@ -614,6 +774,6 @@ App.jsx
 
 **Dibuat sebagai bagian dari Tugas Sesi 3 — Bootcamp AI Engineer Hacktiv8**
 
-🏝️ *Menjelajahi Nusantara bersama AI* 🇮🇩
+🏝️ _Menjelajahi Nusantara bersama AI_ 🇮🇩
 
 </div>
